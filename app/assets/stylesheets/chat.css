@@ -4,15 +4,15 @@
     .chatbox {
         position: fixed;
         width: 850px;
-        height:650px;
+        height:615px;
         display: none;
         }}
         @media(max-width:800px)
         {
             .chatbox {
                 position: fixed;
-                width: 700px;
-                height:650px;
+                width: 310px;
+                height:570px;
                 display: none;
             }
         }
@@ -33,8 +33,7 @@
                 display: inline;
                 font-size: 17px;
                 font-weight: 700;
-                width: 700px;
-
+                width: 310px;
             }
             .chatboxblink {
                 background-color: #176689;
@@ -51,7 +50,6 @@
                 font-size: 17px;
                 font-weight: 700;
                 width: 850px;
-
             }
             .chatboxblink {
                 background-color: #176689;
@@ -67,7 +65,7 @@
             .chatboxcontent {
                 font-family: arial, sans-serif;
                 height: 500px;
-                width: 700px;
+                width: 310px;
                 overflow-y: auto;
                 padding: 7px;
                 border-left: 1px solid #cccccc;
