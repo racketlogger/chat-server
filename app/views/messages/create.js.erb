@@ -3,8 +3,7 @@
     var chatbox = $("#chatbox_" + id + " .chatboxcontent");
     var sender_id = "<%= @message.user.id %>";
     var reciever_id = $('meta[name=user-id]').attr("content");
-
-    chatbox.append("<%= j render( partial: @message ) %>");
+    chatbox.append("<%= j render( partial: @message ,locals: {:current_user => @current_user}) %>");
     chatbox.scrollTop(chatbox[0].scrollHeight);
 
     if (sender_id != reciever_id) {

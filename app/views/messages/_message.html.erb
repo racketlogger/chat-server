@@ -2,10 +2,13 @@
   <div class="avatar">
     <img src="http://placehold.it/50x50" />
   </div>
+  <% if message.recipient.to_s == @current_user.id.to_s %>
+ 	<% message.update_columns(:seen =>"1") %>
+  <% end %>
   <div class="chatboxmessagecontent">
     <p><%= message.body %></p>
     <time datetime="<%= message.created_at %>" title="<%= message.created_at.strftime("%d %b  %Y at %I:%M%p") %>">
-      <%= message_interlocutor(message).name %> • <%= message.created_at.strftime("%H:%M %p") %>
+    <% if message.seen == "1" %> Seen • <% end %><%= message_interlocutor(message).name %> • <%= message.created_at.strftime("%H:%M %p") %>
     </time>
   </div>
 </li>
